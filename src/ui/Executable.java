@@ -6,7 +6,7 @@ import model.Controller;
 public class Executable {
 
     private Scanner escaner;
-    private Controller controladora;
+    private Controller cont;
     private static boolean flag;
 
     /**
@@ -19,7 +19,7 @@ public class Executable {
      */
     public Executable() {
         escaner = new Scanner(System.in);
-        controladora = new Controller();
+        cont = new Controller();
     }
 
     /**
@@ -46,13 +46,14 @@ public class Executable {
 			escaner.nextLine();
 
 			switch (option) {
-					case 1:
+					case 1:cont.fixture();
 
 						break;
-					case 2:
+					case 2: cont.prechargeinfo();
+                    System.out.println("Información precargada.");
 
 						break;
-					case 3:
+					case 3:System.out.println(cont.simularJugadaGol());
 
 						break;
 					case 4:
